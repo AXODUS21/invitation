@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Are Invited!!!</title>
+    <link rel="stylesheet" href="invitation.css"/>
+    <link rel="icon" href="./images//icons8-cake-48.png" type="image/png"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <div class="open">
+            <h1>
+                You've Been Invited!!!
+            </h1>
+            <img src="./images//icons8-cake-94.png"/>
+        </div>
+        <div class="container">
+            <div class="box">
+                <span style="--i:1"><img src="./images/2.png"></span>
+                <span style="--i:2"><img src="./images/3.png"></span>
+                <span style="--i:3"><img src="./images/4.png"></span>
+                <span style="--i:4"><img src="./images/1.png"></span>
+            </div>
+            <div class="btns">
+                <div class="btn prev"></div>
+                <div class="btn next"></div>
+            </div>  
+        </div>
+        <script>
+            let prev = document.querySelector(".prev")
+            let next = document.querySelector(".next")
+            let box = document.querySelector(".box")
+            
+            let degrees = 0;
+            
+            prev.addEventListener('click', () => {
+                degrees += 90;
+                box.style = `transform: perspective(1000px) rotateY(${degrees}deg)`
+            })
+
+            next.addEventListener('click', () => {
+                degrees -= 90;
+                box.style = `transform: perspective(1000px) rotateY(${degrees}deg)`
+            })
+        
+            
+        </script>
+    </body>
+</html> 
